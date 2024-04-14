@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e4228541290f405419d703e2f762b9d1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wordToGuessText: {instanceID: 0}
+  - lettersGuessedText: {instanceID: 0}
+  - goodClothingSprite: {fileID: -1856936727, guid: 68c82ec284a1801418a9f8ae934b7b50, type: 3}
+  - badClothingSprite: {instanceID: 0}
+  - hangmanRenderer: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
