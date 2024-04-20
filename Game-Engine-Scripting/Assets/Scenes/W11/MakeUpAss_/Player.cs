@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
-    private ElevatorDetection elevatorDectection;
+    private ElevatorDetection elevatorDetection;
     private CharacterController characterController;
     [SerializeField]
     float speed = 5.0f;
@@ -18,14 +18,14 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        elevatorDectection = GetComponent<ElevatorDetection>();
+        elevatorDetection = GetComponent<ElevatorDetection>();
         characterController = GetComponent<CharacterController>();
     }
     //TODO: This function should be called from your player script
     //      You will need to create a reference to ElevatorDetection in your player script and assign it as a reference
     public ElevatorButton GetButton()
     {
-        return elevatorDectection.GetButton();
+        return elevatorDetection.GetButton();
     }
 
      void Update()
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
     void PressElevatorButton()
     {
         
-            ElevatorButton currentButton = GetButton();
+            ElevatorButton currentButton = elevatorDetection.GetButton();
             if(currentButton != null)
             {
                 currentButton.Press();

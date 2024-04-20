@@ -19,16 +19,11 @@ public class ElevatorButton : MonoBehaviour
         //TODO: Use GetComponent to get the MeshRenderer attached to this button and assign it to meshRenderer
         meshRenderer = GetComponent<MeshRenderer>();
     }
-    public int Floor
-    {
-        get { return floor; }
-    }
-
     public void Press()
     {
         //TODO: Call GoToFloor and pass in the floor
         elevator.GoToFloor(floor);
-        Debug.Log("Button pressed: " + gameObject.name);
+        Debug.Log("Button pressed: " + floor);
     }
 
     public void Select()

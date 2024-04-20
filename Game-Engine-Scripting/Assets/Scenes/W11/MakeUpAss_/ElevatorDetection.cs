@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 //TODO: This script should be attached to the camera since we are going off of wherever the camera is looking at
@@ -9,9 +8,19 @@ public class ElevatorDetection : MonoBehaviour
     private ElevatorButton button;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        FindButton();
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if(button != null)
+            {
+                button.Press();
+            }
+        }
+        else
+        {
+            FindButton();
+        }
     }
 
     void FindButton()
